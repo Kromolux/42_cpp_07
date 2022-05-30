@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rkaufman <rkaufman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 22:06:32 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/05/30 19:46:03 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/05/30 21:06:05 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ Array<T>::Array(unsigned int size)
 		std::cout << COLOR_MAGENTA << "[Array] parameter constructor called." << std::endl << COLOR_DEFAULT;
 	_array = new T[size];
 	_size = size;
+	for (unsigned int i = 0; i < size; i++)
+		_array[i] = 0;
 }
 
 template <typename T>
